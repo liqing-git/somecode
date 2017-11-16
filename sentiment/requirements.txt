@@ -1,0 +1,5 @@
+#python3.6
+requests
+beautifulsoup4
+PyMySQL
+# pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
