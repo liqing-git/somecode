@@ -3,11 +3,17 @@ Created on 2017年11月16日
 
 @author: liqing
 '''
+import os
+import sys
 import time
 import requests
 import traceback
 from datetime import datetime
 from bs4 import BeautifulSoup
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(base_dir)
+
+
 from myutils.mysql_util import batch_save_date_to_db
 
     
