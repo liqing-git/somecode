@@ -32,9 +32,7 @@ def pasrse_html(html):
             tds = tr.find_all("td")
             da = [now]
             name = tds[0].text.strip()
-            print(name)
             name = name.split("（")
-            print(name)
             symbol = name[1].replace("）", "")
             da.append(symbol.strip())
             name = name[0]
