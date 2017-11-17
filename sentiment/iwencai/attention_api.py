@@ -10,6 +10,7 @@ import requests
 import json
 import traceback
 from datetime import datetime
+import time
 
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(base_dir)
@@ -87,6 +88,7 @@ def get_data():
                 
             da = [now,symbol,name,follow_iwencai,follow_xueqiu,follow_hexun]
             datas.append(da)
+        time.sleep(1)
     
     in_sql = "replace into  follow_iwencai(f_date,symbol,name,follow_iwencai,follow_xueqiu,follow_hexun,up_time) values(%s,%s,%s,%s,%s,%s,now()) "
     
